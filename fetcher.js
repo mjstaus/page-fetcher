@@ -13,13 +13,13 @@ const fetcher = (url, path) => {
     if(!error){
       fs.writeFile(path, body, 'utf8', (err) => {
         if (err) throw err;
-        // console.log(`Downloaded and saved to ${path}`)
+        console.log(`Downloaded and ${body.length} bytes saved to ${path}`)
       })
     }
   });
 };
 
-fetcher(url, './index.html');
+fetcher(url, './hello.html');
 
 /* 
 const fs = require('fs');
